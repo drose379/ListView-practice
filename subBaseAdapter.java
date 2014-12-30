@@ -39,6 +39,18 @@ class SubBaseAdapter extends BaseAdapter {
 		return listData.length;
 	}
 
+	/*
+		* getView is used to form the listView out of the data set
+		* It gets passed 3 parameters: 
+
+			* Integer (position): used to navigate through the array of data that is passed in. EX: array[position]
+
+			* View (recycledView): If this method is called more then once and a View has already been inflated, the same View will be used - 
+				* instead of Creating a new one. If recycledView is null, a new one needs to be -inflated-
+
+			* ViewGroup (parent): The ViewGroup class creates a view that allows other views to be attached to it (The multiple TextViews) - 
+				* The inflate() method adds the R.layout.text_layout on top of the parent layout (R.layout.test_layout)
+	*/
 	@Override
 	public View getView(int position,View recycledView,ViewGroup parent) {
 		View view;
